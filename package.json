@@ -1,0 +1,19 @@
+{
+  "name": "betterchrome",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danail Dinev",
+  "license": "MIT",
+  "homepage": "https://github.com/danaildinev/betterchrome",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danaildinev/betterchrome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danaildinev/betterchrome/issues"
+  },
+  "description": ""
+}

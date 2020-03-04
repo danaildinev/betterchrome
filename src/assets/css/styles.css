@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body#options {
+    background-attachment: fixed;
+}
+
+body#popup {
+    width: 500px;
+    font-size: 14px;
+}
+
+footer {
+    margin: 10px 0;
+}
+
+img.app-logo {
+    width: 50px;
+    margin-right: 12px;
+}
+
+img.app-logo.small{
+    width: 32px;
+    margin-right: 8px;
+}
+
+.bg-gradient {
+    background: linear-gradient(-39deg, rgba(212,207,201,1) 0%, rgba(52,71,84,1) 100%);
+}
+
+.content {
+    background: rgba(255,255,255,0.7);
+    padding: 10px;
+}
+
+#popup .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+}
+
+#popup .heading i {
+    color: #fff;
+}
+
+#popup .title {
+    margin: 0;
+    font-size: 24px;
+}
+
+#popup .components {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#popup .components .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#popup .components .item:last-of-type {
+    margin-bottom: 0;
+}
+
+#options .heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+#options .title {
+    color: #fff;
+    margin: 0;
+}

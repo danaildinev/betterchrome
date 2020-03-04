@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body id="popup" class="bg-gradient">
+    <header class="heading">
+        <div class="d-flex align-items-center">
+            <img class="app-logo small" src="assets/icons/icon-big-outline.png" alt="Icon">
+            <h1 class="title">BetterChrome</h1>
+        </div>
+        <button type="button" id="options" class="btn"><i class="fas fa-cog"></i></button>
+    </header>
+
+    <section class="content">
+        <ul class="components">
+            <li class="item" id="youtube">
+                <div id="youtube-status"><i id="youtube-status-icon" class="fas"></i> Remove Youtube shelfs</div>
+                <div id="youtube-actions" class="btn-group btn-group-sm" role="group">
+                    <button type="button" id="btnRecoverYoutubeShelfs" class="btn btn-light">Recover shelfs</button>
+                    <button type="button" id="btnRemoveYoutubeShelfs" class="btn btn-danger">Remove shelfs</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <script src="popup.js"></script>
+    <script src="https://kit.fontawesome.com/ce291ec14f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

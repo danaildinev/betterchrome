@@ -1,0 +1,29 @@
+{
+    "name": "BetterChrome",
+    "version": "1.0",
+    "description": "Make browsing the internet better!",
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "options_page": "options.html",
+    "browser_action": {
+        "default_icon": "assets/icons/icon-popup.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "assets/icons/icon16.png",
+        "48": "assets/icons/icon48.png",
+        "128": "assets/icons/icon128.png"
+    },
+    "manifest_version": 2,
+    "content_security_policy": "script-src 'self' https://kit.fontawesome.com/; object-src 'self'"
+}
