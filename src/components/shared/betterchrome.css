@@ -1,3 +1,40 @@
 .bh-hide {
     display: none;
 }
+
+.bh-yt-btn {
+    font-size: var(--ytd-tab-system_-_font-size);
+    color: var(--yt-spec-text-secondary);
+    font-weight: var(--ytd-tab-system_-_font-weight);
+    text-transform: uppercase;
+    padding: 0;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: var(--yt-string-icon-padding, 8px);
+}
+
+.bh-yt-btn:hover {
+    color: var(--yt-spec-icon-active-other);
+}
+
+.bh-yt-icon {
+    display: var(--layout-inline_-_display);
+    align-items: var(--layout-center-center_-_align-items);
+    justify-content: var(--layout-center-center_-_justify-content);
+    vertical-align: middle;
+    fill: var(--iron-icon-fill-color, currentcolor);
+    stroke: var(--iron-icon-stroke-color, none);
+    width: var(--iron-icon-width, 24px);
+    height: var(--iron-icon-height, 24px);
+    margin-left: var(--iron-icon_-_margin-left);
+    margin-bottom: var(--iron-icon_-_margin-bottom);
+    margin-right: var(--iron-icon_-_margin-right);
+    margin-top: var(--iron-icon_-_margin-top);
+}
+
+.bh-yt-btn p {
+    margin-left: var(--yt-string-icon-padding, 8px);
+}
