@@ -11,7 +11,7 @@
         removeShelfsWatchAgain,
         debugConsole,
         qClassHideShelf = "bh-hide",
-        qShelfsWithTag = `ytd-search .bh-hide`,
+        qShelfsWithTag = "ytd-search .bh-hide",
         qYtProgressbar = "yt-page-navigation-progress",
         qYtTag = "ytd-app",
         qYtProgressbarAttr = "aria-valuenow",
@@ -100,7 +100,7 @@
     }
 
     //listen for page change (not the most efficent way but it works... for now...)
-    var progressBar = document.querySelector(qYtProgressbar);
+    /*var progressBar = document.querySelector(qYtProgressbar);
     const config = { attributes: true, childList: true, subtree: true };
     const callback = function (mutationsList, observer) {
         for (let mutation of mutationsList) {
@@ -122,9 +122,10 @@
     };
     const observer = new MutationObserver(callback);
     var content = document.querySelector(qYtTag);
+    console.log(content)
     observer.observe(content, config);
     window.addEventListener("beforeunload", function () {
         observer.disconnect();
         observerReload.disconnect();
-    });
+    });*/
 })();

@@ -13,6 +13,8 @@ Features:
 
 Only works for english language (for now)!
 
+It the shelfs are still showing, just refresh the search page!
+
 **Info: The YouTube component of the extension is written in very short period of time, so sometimes it fails to filter all youtube shelfs and needs page refresh, but overall it's working fine :D I'll appreciate sharing bugs or helping me improving this project with improved and new features!**
  
 ## How to use
