@@ -9,6 +9,7 @@
         removeShelfsSearchesRelated,
         removeShelfsSearchesLatest,
         removeShelfsWatchAgain,
+        removeShelfsPeopleSearch,
         debugConsole,
         qClassHideShelf = "bh-hide",
         qShelfsWithTag = "ytd-search .bh-hide",
@@ -32,7 +33,7 @@
     //get some settings
     var p = new Promise(function (resolve, reject) {
         var data = null;
-        chrome.storage.sync.get(['ytRemoveShelfs', 'ytRemoveShelfForyou', 'ytRemoveShelfsConsole', 'ytRemoveShelfRelated', 'ytRemoveShelfSearchesRelated', 'ytRemoveShelfLatest', 'ytRemoveShelfWatchAgain'], function (result) {
+        chrome.storage.sync.get(['ytRemoveShelfs', 'ytRemoveShelfForyou', 'ytRemoveShelfsConsole', 'ytRemoveShelfRelated', 'ytRemoveShelfSearchesRelated', 'ytRemoveShelfLatest', 'ytRemoveShelfWatchAgain', 'ytRemoveShelfPeopleSearch'], function (result) {
             data = result;
             resolve(data);
         });
@@ -42,6 +43,7 @@
         removeShelfsSearchesRelated = data.ytRemoveShelfSearchesRelated;
         removeShelfsSearchesLatest = data.ytRemoveShelfLatest;
         removeShelfsWatchAgain = data.ytRemoveShelfWatchAgain;
+        removeShelfsPeopleSearch = data.ytRemoveShelfPeopleSearch;
         debugConsole = data.ytRemoveShelfsConsole;
         if (data.ytRemoveShelfs) {
             removeShelfs();
@@ -88,6 +90,9 @@
         }
         if (removeShelfsSearchesRelated) {
             removeChilds("ytd-horizontal-card-list-renderer", "Searches related to ", "Removed 'Searches related to...' shelfs")
+        }
+        if (removeShelfsPeopleSearch) {
+            removeChilds("ytd-horizontal-card-list-renderer", "People also search for", "Removed 'People also search for...' shelfs")
         }
     }
 

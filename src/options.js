@@ -5,10 +5,11 @@ var btnClose = document.getElementById('close'),
     ytBtnRemoveShelfSearchesRelated = document.getElementById('yt-removeshelf-searchesrelated'),
     ytBtnRemoveShelfRelated = document.getElementById('yt-removeshelf-related'),
     ytBtnRemoveShelfLatest = document.getElementById('yt-removeshelf-latest'),
-    ytBtnRemoveShelfWatchAgain = document.getElementById('yt-removeshelf-watchagain');
+    ytBtnRemoveShelfWatchAgain = document.getElementById('yt-removeshelf-watchagain'),
+    ytBtnRemoveShelfPeopleSearch = document.getElementById('yt-removeshelf-peoplesearch');
 
 //get settings
-chrome.storage.sync.get(['ytRemoveShelfs', 'ytRemoveShelfForyou', 'ytRemoveShelfsConsole', 'ytRemoveShelfRelated', 'ytRemoveShelfSearchesRelated', 'ytRemoveShelfLatest', 'ytRemoveShelfWatchAgain'], function (result) {
+chrome.storage.sync.get(['ytRemoveShelfs', 'ytRemoveShelfForyou', 'ytRemoveShelfsConsole', 'ytRemoveShelfRelated', 'ytRemoveShelfSearchesRelated', 'ytRemoveShelfLatest', 'ytRemoveShelfWatchAgain', 'ytRemoveShelfPeopleSearch'], function (result) {
     ytBtnRemoveShelfForYou.checked = result.ytRemoveShelfForyou;
     ytBtnRemoveShelfs.checked = result.ytRemoveShelfs;
     ytBtnRemoveShelfConsole.checked = result.ytRemoveShelfsConsole;
@@ -16,6 +17,7 @@ chrome.storage.sync.get(['ytRemoveShelfs', 'ytRemoveShelfForyou', 'ytRemoveShelf
     ytBtnRemoveShelfSearchesRelated.checked = result.ytRemoveShelfSearchesRelated;
     ytBtnRemoveShelfLatest.checked = result.ytRemoveShelfLatest;
     ytBtnRemoveShelfWatchAgain.checked = result.ytRemoveShelfWatchAgain;
+    ytBtnRemoveShelfPeopleSearch.checked = result.ytRemoveShelfPeopleSearch;
     toggleYoutubeShelfsChecks();
 });
 
@@ -42,6 +44,9 @@ ytBtnRemoveShelfLatest.addEventListener('click', function () {
 ytBtnRemoveShelfWatchAgain.addEventListener('click', function () {
     chrome.storage.sync.set({ 'ytRemoveShelfWatchAgain': ytBtnRemoveShelfWatchAgain.checked });
 });
+ytBtnRemoveShelfPeopleSearch.addEventListener('click', function () {
+    chrome.storage.sync.set({ 'ytRemoveShelfPeopleSearch': ytBtnRemoveShelfPeopleSearch.checked });
+});
 
 function toggleYoutubeShelfsChecks() {
     ytBtnRemoveShelfForYou.disabled = !ytBtnRemoveShelfs.checked;
@@ -50,6 +55,7 @@ function toggleYoutubeShelfsChecks() {
     ytBtnRemoveShelfSearchesRelated.disabled = !ytBtnRemoveShelfs.checked;
     ytBtnRemoveShelfLatest.disabled = !ytBtnRemoveShelfs.checked;
     ytBtnRemoveShelfWatchAgain.disabled = !ytBtnRemoveShelfs.checked;
+    ytBtnRemoveShelfPeopleSearch.disabled = !ytBtnRemoveShelfs.checked;
 }
 
 //other buttons
